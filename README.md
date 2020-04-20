@@ -1,9 +1,10 @@
 # EE5611_project
-Machine Learning for Wireless communications course project on Sequential Convolutional Recurrent Neural Networks for fast automatic modulation classification.
+Machine Learning for Wireless communications course project on Sequential Convolutional Recurrent Neural Networks for fast automatic modulation classification by kaisheng Liao, Guanhong Tao, Yi Zhong, Yaping Zhang, Zhenghong Zhang.
 
+Link to the paper: https://arxiv.org/abs/1909.03050
 The datasets for this project can be found at https://www.deepsig.io/datasets.
 
-DEEPSIG DATASET: RADIOML 2016.10A
+## DEEPSIG DATASET: RADIOML 2016.10A
 A synthetic dataset, generated with GNU Radio, consisting of 11 modulations (8 digital and 3 analog) at varying signal-to-noise ratios. This dataset was first released at the 6th Annual GNU Radio Conference.
 
 This represents a cleaner and more normalized version of the 2016.04C dataset, which this supersedes.  The file is formatted as a "pickle" file which can be open for example in python by using cPickle.load(...).

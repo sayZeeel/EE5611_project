@@ -10,9 +10,9 @@ This represents a cleaner and more normalized version of the 2016.04C dataset, w
 
 Signal Generation Software: https://github.com/radioML/dataset
 
-Dataset Download: RML2016.10a.tar.bz2
+Dataset Download: http://opendata.deepsig.io/datasets/2016.10/RML2016.10a.tar.bz2
 
-Larger Version (including AM-SSB): RML2016.10b.tar.bz2
+Larger Version (including AM-SSB): http://opendata.deepsig.io/datasets/2016.10/RML2016.10b.tar.bz2
 
-Example ClassifierJupyter Notebook: RML2016.10a_VTCNN2_example.ipynb
+Example ClassifierJupyter Notebook: https://github.com/radioML/examples/blob/master/modulation_recognition/RML2016.10a_VTCNN2_example.ipynb
 

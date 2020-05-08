@@ -12,3 +12,16 @@ for mod in mods:
         X.append(data[(mod,snr)])
         for i in range(data[(mod,snr)].shape[0]):  lbl.append((mod,snr))
 X = np.vstack(X)
+
+n_examples = X.shape[0]
+n_train = int(n_examples * 0.9)
+train_idx = np.random.choice(range(0,n_examples), size=n_train, replace=False)
+test_idx = list(set(range(0,n_examples))-set(train_idx))
+X_train = X[train_idx]
+X_test =  X[test_idx]
+def to_onehot(yy):
+    yy1 = np.zeros([len(yy), max(yy)+1])
+    yy1[np.arange(len(yy)),yy] = 1
+    return yy1
+Y_train = to_onehot(list(map(lambda x: mods.index(lbl[x][0]), train_idx)))
+Y_test = to_onehot(list(map(lambda x: mods.index(lbl[x][0]), test_idx)))

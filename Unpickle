@@ -1,0 +1,14 @@
+import pickle
+
+with open('/content/dataset/RML2016.10a_dict.pkl', 'rb') as f:
+    data = pickle.load(f,encoding='latin1')
+
+import numpy as np
+snrs,mods = map(lambda j: sorted(list(set(map(lambda x: x[j], data.keys())))), [1,0])
+X = []  
+lbl = []
+for mod in mods:
+    for snr in snrs:
+        X.append(data[(mod,snr)])
+        for i in range(data[(mod,snr)].shape[0]):  lbl.append((mod,snr))
+X = np.vstack(X)

@@ -7,7 +7,7 @@ from keras.optimizers import Adam
 import keras.backend as K
 
 def baseline_lstm():
-
+	
 	inputs = Input((128,2,))
 	l = BatchNormalization()(inputs)
 	l = LSTM(128,return_sequences=True,activation='tanh',unroll=True)(l)   
@@ -19,9 +19,9 @@ def baseline_lstm():
 	model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.001) ,metrics=['accuracy'])
 	model.summary()
 	return model
-  
-  def baseline_conv():
 
+def baseline_conv():
+	
 	inputs = Input((128,2,))
 	l = BatchNormalization()(inputs)
 	l = Lambda(lambda t: K.expand_dims(t, -1))(l)
@@ -38,8 +38,8 @@ def baseline_lstm():
 	model.summary()
 	return model
   
-  def new_scrnn():
-
+def new_scrnn():
+	
 	inputs = Input((128,4,))
 	l = BatchNormalization()(inputs)
 	l = Conv1D(filters=128,kernel_size=5,activation='relu')(l)
@@ -55,3 +55,4 @@ def baseline_lstm():
 	model.compile(loss='categorical_crossentropy', optimizer=Adam(learning_rate=0.001) ,metrics=['accuracy'])
 	model.summary()
 	return model
+
